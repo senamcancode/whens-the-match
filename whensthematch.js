@@ -1,66 +1,120 @@
-// write a function that gets the date and time 
-// if the date is equal to any of the game dates return arsenal are playing at x time today 
-// if the date is not equal to any of the game dates return arsenal are not playing today 
-// write code that tells the user when the next time arsenal are playing 
-
-// const date = new Date();
-
-// let day = date.getDate();
-// let month = date.getMonth() + 1;
-// let year = date.getFullYear();
-
-// // This arrangement can be altered based on how we want the date's format to appear.
-// let currentDate = `${day}-${month}-${year}`;
-// console.log(currentDate); // "17-6-2022"
-
-// function displayFixture(){
-//     if (currentDate === "26-3-2023"){
-//         console.log("That's today!!!")
-//     }
-// }
+// inspiration for this was taking from this gitpost https://gist.github.com/DavidWells/10708a5be3e5b5e29f13
 
 
-// below we could do a date check to see if its any of the dates provided in teh fixture list!!!! 
+checkMatchDate() 
 
-const liverpoolFixture = {
-    month: 3,
-    date: 9
-  }
-
-const westhamFixture = {
-    month: 3, 
-    date: 16
-}
-const southhamptonFixture = {
-    month: 3, 
-    date: 21
-}
-
-const mancityFixture = {
-    month: 3, 
-    date: 26
-}
-
-const chelseaFixture = {
-    month: 3, 
-    date: 29
-}
-
-
-
-
-//stopped at man city so still have to input chelsea
-
-
-
-
-//   function isItAprilFoolDay() {
-//     var now = new Date();
-//     return (now.getMonth() == aprilFools.month && now.getDate() == aprilFools.date);
-//   }
+function checkMatchDate() {
+    function liverpoolMatchDay() {
+      let liverpoolFixtureDate = {
+        month: 3,
+        date: 9
+      };
+      let now = new Date();
+      return (now.getMonth() == liverpoolFixtureDate.month && now.getDate() == liverpoolFixtureDate.date);
+    }
   
-//   if(isItAprilFoolDay()){
-//     console.log("todays date is 3/4/23"); 
-//   } else {
-//     // there is less fake stuff today
-//   }
+    if (liverpoolMatchDay()) {
+        document.getElementById("liverpool").style.display ='block'; 
+    }
+
+    function westhamMatch() {
+        let westham ={
+            month: 3,
+            date: 16
+        };    
+        let now = new Date();
+        return (now.getMonth() == westham.month && now.getDate() == westham.date);
+        }
+        
+        if(westhamMatch()){
+            document.getElementById("westham").style.display ='block'; 
+        }
+    
+  function southamptonMatch() {
+        let southampton ={
+            month: 3,
+            date: 21
+        }    
+        let now = new Date();
+        return (now.getMonth() == southampton.month && now.getDate() == southampton.date);
+      }
+
+      if(southamptonMatch()){
+        document.getElementById("southampton").style.display ='block';
+      }
+  function mancityMatch() {
+        let mancity ={
+            month: 3,
+            date: 26
+        }    
+        let now = new Date();
+        return (now.getMonth() == mancity.month && now.getDate() == mancity.date);
+      }
+
+      if(mancityMatch()){
+        document.getElementById("mancity").style.display ='block';
+      }
+  function chelseaMatch() {
+        let chelsea ={
+            month: 3,
+            date: 29
+        }    
+        let now = new Date();
+        return (now.getMonth() == chelsea.month && now.getDate() == chelsea.date);
+      }
+
+      if(chelseaMatch()){
+        document.getElementById("chelsea").style.display ='block';
+      }
+  function newcastleMatch() {
+        let newcastle ={
+            month: 4,
+            date: 7
+        }    
+        let now = new Date();
+        return (now.getMonth() == newcastle.month && now.getDate() == newcastle.date);
+      }
+
+      if(newcastleMatch()){
+        document.getElementById("newcastle").style.display ='block';
+      }
+  function brightonMatch() {
+        let newcastle ={
+            month: 4,
+            date: 14
+        }    
+        let now = new Date();
+        return (now.getMonth() == brighton.month && now.getDate() == brighton.date);
+      }
+
+      if(brightonMatch()){
+        document.getElementById("brighton").style.display ='block';
+      }
+  function forrestMatch() {
+        let forrest ={
+            month: 4,
+            date: 20
+        }    
+        let now = new Date();
+        return (now.getMonth() == forrest.month && now.getDate() == forrest.date);
+      }
+
+      if(forrestMatch()){
+        document.getElementById("forrest").style.display ='block';
+      }
+  function wolvesMatch() {
+        let wolves ={
+            month: 4,
+            date: 28
+        }    
+        let now = new Date();
+        return (now.getMonth() == wolves.month && now.getDate() == wolves.date);
+      }
+
+      if(wolvesMatch()){
+        document.getElementById("wolves").style.display ='block';
+      }
+    }
+
+
+
