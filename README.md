@@ -1,5 +1,5 @@
 
-# whensthematch
+# More features coming soon
 
 additional features to come: 
 1. countdown to the match time 
