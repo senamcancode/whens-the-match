@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # whensthematch
 
 additional features to come: 
@@ -6,7 +6,7 @@ additional features to come:
 1. lineups for game day
 2. match result when game is finished
 3. embeded highlight of the most recent game 
-=======
+
 # whensthematch website 
 
 This is a simple website that tells you if Arsenal is playing today and at what time. 
