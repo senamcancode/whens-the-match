@@ -15,6 +15,8 @@ function checkMatchDate() {
   
     if (liverpoolMatchDay()) {
         document.getElementById("liverpool").style.display ='block'; 
+    } else{
+      document.getElementById("notplaying").style.display='block'; 
     }
 
     function westhamMatch() {
@@ -114,7 +116,9 @@ function checkMatchDate() {
       if(wolvesMatch()){
         document.getElementById("wolves").style.display ='block';
       }
-    }
+    } 
+
+
 
 
 
