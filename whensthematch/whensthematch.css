@@ -178,6 +178,9 @@ span {
     font-weight: bold;
 }
 
+#notplaying{
+    display: block; 
+}
 
 /* display block the fixture when the date is local date is equal to the fixture date*/
 

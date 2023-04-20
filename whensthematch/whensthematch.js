@@ -15,8 +15,6 @@ function checkMatchDate() {
   
     if (liverpoolMatchDay()) {
         document.getElementById("liverpool").style.display ='block'; 
-    } else{
-      document.getElementById("notplaying").style.display='block'; 
     }
 
     function westhamMatch() {
@@ -30,7 +28,9 @@ function checkMatchDate() {
         
         if(westhamMatch()){
             document.getElementById("westham").style.display ='block'; 
-        }
+
+    }  
+
     
   function southamptonMatch() {
         let southampton ={
@@ -43,7 +43,10 @@ function checkMatchDate() {
 
       if(southamptonMatch()){
         document.getElementById("southampton").style.display ='block';
+        document.getElementById("notplaying").style.display='none'; 
       }
+
+
   function mancityMatch() {
         let mancity ={
             month: 3,
@@ -55,6 +58,7 @@ function checkMatchDate() {
 
       if(mancityMatch()){
         document.getElementById("mancity").style.display ='block';
+        document.getElementById("notplaying").style.display='none'; 
       }
   function chelseaMatch() {
         let chelsea ={
@@ -67,6 +71,7 @@ function checkMatchDate() {
 
       if(chelseaMatch()){
         document.getElementById("chelsea").style.display ='block';
+        document.getElementById("notplaying").style.display='none'; 
       }
   function newcastleMatch() {
         let newcastle ={
@@ -79,9 +84,10 @@ function checkMatchDate() {
 
       if(newcastleMatch()){
         document.getElementById("newcastle").style.display ='block';
+        document.getElementById("notplaying").style.display='none'; 
       }
   function brightonMatch() {
-        let newcastle ={
+        let brighton ={
             month: 4,
             date: 14
         }    
@@ -91,7 +97,8 @@ function checkMatchDate() {
 
       if(brightonMatch()){
         document.getElementById("brighton").style.display ='block';
-      }
+        document.getElementById("notplaying").style.display='none'; 
+      
   function forrestMatch() {
         let forrest ={
             month: 4,
@@ -103,6 +110,7 @@ function checkMatchDate() {
 
       if(forrestMatch()){
         document.getElementById("forrest").style.display ='block';
+        document.getElementById("notplaying").style.display='none'; 
       }
   function wolvesMatch() {
         let wolves ={
@@ -115,8 +123,10 @@ function checkMatchDate() {
 
       if(wolvesMatch()){
         document.getElementById("wolves").style.display ='block';
+        document.getElementById("notplaying").style.display='none'; 
       }
-    } 
+    }
+}
 
 
 
