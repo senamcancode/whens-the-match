@@ -15,6 +15,7 @@ function checkMatchDate() {
   
     if (liverpoolMatchDay()) {
         document.getElementById("liverpool").style.display ='block'; 
+        document.getElementById("notplaying").style.display='none'; 
     }
 
     function westhamMatch() {
@@ -28,6 +29,7 @@ function checkMatchDate() {
         
         if(westhamMatch()){
             document.getElementById("westham").style.display ='block'; 
+            document.getElementById("notplaying").style.display='none'; 
 
     }  
 
