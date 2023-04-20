@@ -11,7 +11,7 @@ additional features to come:
 
 This is a simple website that tells you if Arsenal is playing today and at what time. 
 
-How to Us: 
+How to Use:
 The website will display the date and time of the next Arsenal match, as well as information about whether or not they are playing today.
 
 Technologies Used: 
