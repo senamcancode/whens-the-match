@@ -54,7 +54,7 @@ these are the colors of the theme
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
 
 body{
-    background: #c94444ff;
+    background: white;
     font-family:'Golos Text', sans-serif;
     display:flex; 
     flex-direction:column; 
@@ -86,9 +86,9 @@ nav{
 }
 
 .navlist{
-    background:#da9d92ff; 
+    background:white; 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(201, 68, 68, 0.34);
+    /* border: (201, 68, 68, 0.34); */
     padding: 1rem 0; 
     display:flex; 
     justify-content: space-between;
@@ -101,15 +101,17 @@ nav{
     margin: 1rem 1rem 0 1rem; 
     padding: 0.5rem 2rem;
     border-radius: 20px;
-    border:0.1rem solid white; 
+    border:0.1rem solid black; 
     cursor:pointer; 
 }
 
-
+.navitem1, button{
+    font-size: 1rem; 
+}
 
 button {
-    background-color:#da9d92ff; 
-    color: black;
+    background-color:#c94444ff; 
+    color: white;
 	padding: 0.5rem 2rem;
     font-family:'Golos Text', sans-serif;
 	cursor: pointer;
@@ -126,7 +128,7 @@ a, a:hover, a:active, a:visited {
 }
 
 button:hover, .navitem1:hover{
-        background-color: white;
+        background-color: rgb(174, 70, 70);
         transition: 5ms ease-in;
 }
 
@@ -137,8 +139,8 @@ section {
     justify-content: center;
     flex-wrap: 0;
     background-color:  white;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(201, 68, 68, 0.34);
+    box-shadow: 0 4px 30px rgba(179, 21, 21, 0.1);
+    border: 3px solid rgba(201, 68, 68,);
     border-radius:1rem; 
     padding:6rem; 
     margin: 6rem 10rem 6rem 10rem; 
