@@ -1,53 +1,57 @@
 // inspiration for this was taking from this gitpost https://gist.github.com/DavidWells/10708a5be3e5b5e29f13
 
 
+
+const fixtureDiv = document.getElementById("fixture__text").style.textAlign = "center"; 
+
+
 checkMatchDate() 
 
 function checkMatchDate() {
     if (liverpoolMatch()) {
-        document.getElementById("liverpool").style.display ='block'; 
+        document.getElementById("fixture__text").textContent = "Arsenal are playing Liverpool (A) today at 16:30 BST / 17:30 CEST #COYG"; 
         document.getElementById("notplaying").style.display='none'; 
     }
         
     if(westhamMatch()){
-      document.getElementById("westham").style.display ='block'; 
+      document.getElementById("westham").textContent ='Arsenal are playing West Ham (A) today at 14:00 BST / 15:00 CEST #COYG'; 
       document.getElementById("notplaying").style.display='none'; 
 
     }  
 
     if(southamptonMatch()){
-      document.getElementById("southampton").style.display ='block';
+      document.getElementById("southampton").textContent ='Arsenal are playing Southampton (H) today at20:00 BST / 21:00 CEST';
       document.getElementById("notplaying").style.display='none'; 
     }
 
     if(mancityMatch()){
-        document.getElementById("mancity").style.display ='block';
+        document.getElementById("fixture__text").textContent = "Arsenal are playing Man City (A) today at 20:00 BST / 21:00  CEST"; 
         document.getElementById("notplaying").style.display='none'; 
     }
 
     if(chelseaMatch()){
-        document.getElementById("chelsea").style.display ='block';
+        document.getElementById("chelsea").textContent =' Arsenal are playing Chelsea  (H) today at17:30 BST / 18:30 CEST #COYG';
         document.getElementById("notplaying").style.display='none'; 
     }
 
     if(newcastleMatch()){
-        document.getElementById("newcastle").style.display ='block';
+        document.getElementById("newcastle").textContent ='Arsenal are playing Newcastle (A) today at16:30 BST / 17:30 CEST #COYG';
         document.getElementById("notplaying").style.display='none'; 
     }
   
     if(brightonMatch()){
-        document.getElementById("brighton").style.display ='block';
+        document.getElementById("brighton").textContent ='Arsenal are playing Brighton (H) today at15:00 BST / 16:00 CEST';
         document.getElementById("notplaying").style.display='none'; 
     }
       
 
     if(forrestMatch()){
-        document.getElementById("forrest").style.display ='block';
+        document.getElementById("forrest").textContent ='Forest (A) today at 15:00 BST / 16:00 CEST #COYG';
         document.getElementById("notplaying").style.display='none'; 
     }
 
     if(wolvesMatch()){
-        document.getElementById("wolves").style.display ='block';
+        document.getElementById("wolves").textContent ='Wolves (H) today at 16:30 BST / 17:30 CEST #COYG';
         document.getElementById("notplaying").style.display='none'; 
     }
 }

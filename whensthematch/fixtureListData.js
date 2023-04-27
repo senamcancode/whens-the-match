@@ -57,3 +57,16 @@ const fixtureListData2023 = [
     }, 
 
 ]
+
+
+// var chelseaFixture = {
+//     team:"Chelsea", 
+//     date: 2, 
+//     month: 4,
+//     time: "20:00 BST", 
+//     location :"H",
+// }
+
+
+let teams = fixtureListData2023.team; 
+console.log(teams)
