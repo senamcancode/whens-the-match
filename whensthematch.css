@@ -61,23 +61,34 @@ body{
     justify-content: center;
     align-items: center; 
     max-height: 100vh;
+    font-size: 2rem;
 
+}
+
+main{
+    margin-left:10rem; 
+    margin-right:10rem; 
 }
 
 h1{
-    font-size: 3rem; 
+    font-size: 2.5rem; 
     color:  #000000ff; 
 }
 
-img {
-    max-height: 20rem; 
-    max-width: 20rem; 
+h2{
+    margin:1rem; 
+    color:black; 
 }
 
-p {
-    font-size:2rem; 
-    margin-bottom: 2rem;
-    color:  #000000ff; 
+h1, h2{
+    font-weight:bold; 
+}
+
+#arsenal__logo {
+    width:18rem; 
+    height:12rem; 
+    padding:0rem; 
+    margin-bottom:0rem; 
 }
 
 nav{
@@ -89,12 +100,13 @@ nav{
     background:white; 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     /* border: (201, 68, 68, 0.34); */
-    padding: 1rem 0; 
+    padding: 2rem; 
     display:flex; 
     justify-content: space-between;
     align-items: center;
-    height: 5vh;
-    margin-bottom:3rem; 
+    height:3vh; 
+    /* min-height: 4vh; */
+    margin-top:2rem; 
 }
 
 .button{ 
@@ -107,15 +119,9 @@ nav{
     font-family:'Golos Text', sans-serif;
     text-decoration: none;
     color: black; 
+    
 }
 
-#about{
-    background-color:#c94444ff; 
-}
-
-#about:hover{
-    background-color:rgb(131, 6, 6); 
-}
 
 
 a, a:hover, a:active, a:visited {
@@ -123,68 +129,84 @@ a, a:hover, a:active, a:visited {
     color: black; 
 }
 
-section {
+#home:hover, #about:hover {
+    border: 0.1rem solid rgb(204, 53, 53);
+}
+
+
+.container, #countdown__container, .container__small {
     display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: 0;
-    background-color:  white;
-    box-shadow: 0 4px 30px rgba(179, 21, 21, 0.1);
+    border-radius:1rem;
+    box-shadow: 0 4px 30px rgba(56, 5, 5, 0.1);
+}
+
+.container{
+    margin:1rem; 
+    padding:3rem; 
+    box-shadow: 0 4px 30px rgba(56, 5, 5, 0.1);
     border: 3px solid rgba(201, 68, 68,);
-    border-radius:1rem; 
-    padding:4rem; 
-    margin: 6rem 10rem 6rem 10rem; 
-
-
-}
-
-main {
-    display:flex; 
-    
+    width:120vh; 
+    height:40vh; 
 }
 
 
-.fixtures{
-    display:flex; 
+#countdown__container {
+    display: flex; 
     flex-direction: column;
-    text-align: center;
-    font-size: 2rem; 
-}
-
-#fixturetext{
-    display:block; 
-}
-
-
-.fixturedate{
-    display:none;
     align-items: center;
     justify-content: center;
-
+    padding:1rem; 
+    margin:0; 
 }
 
-.fixturedate a{
-    color: red; 
+.wrapper__small{
+    display:flex; 
+    margin-bottom:2rem; 
 }
 
-.fixturedate p{
-    margin-top: 1rem;
-    font-weight: bold;
+.container__small{
+    width:60vh; 
+    height:40vh;
+    /* border:1px dotted red; */
+    margin-left:2rem;
+    margin-right:2rem
 }
 
-#red__text {
-    color: #c94444ff;
-    font-weight: bold;
+#fixture__text{
+    display:block; 
+    margin-top:3rem;
+  
 }
 
-#notplaying{
-    display: block; 
-}
 
 #countdown{
-    display:block; 
+    display:none; 
+    width: 20vh; 
 }
 
-/* display block the fixture when the date is local date is equal to the fixture date*/
 
+iframe{
+    margin-bottom:1rem; 
+}
+
+
+
+#highlight__cover__image{
+    width:500px; 
+    height:250px; 
+    opacity:0.7; 
+    border-radius: 1rem;
+}
+
+#highlight__cover__image:hover{
+    opacity:1; 
+    transition: opacity .25s ease-in-out;
+}
+
+
+
+/* background-image: url(https://i.guim.co.uk/img/media/b62e032371c61a32c045ea0aabfce94a9d886a7a/0_155_4930_2958/master/4930.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=46493f64f1df6937d550994a60984cbd);
+background-size: cover; */

@@ -1,32 +1,17 @@
-var end = new Date('30/04/2023 18:00 BST'); 
-var second = 1000; 
-var minute = second * 60; 
-var hour = minute * 60; 
-var day = hour * 24; 
-var timer; 
+var countDownDate = new Date("May 1, 2023 00:59:00").getTime(); 
 
-function showRemaining(){
-    var now = new Date(); 
-    var distance = end - now; 
+var interval = setInterval(function(){
+    var now = new Date().getTime(); 
+    var distance = countDownDate - now; 
 
-    if (distance < 0 ){
-        clearInterval(timer); 
-        document.getElementById('countdown').innerHTML = "finished"
+    //if distance is less than 24 hours then display the countdown 
+    // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        return; 
+    if (distance < 86400000){
+    document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " +seconds + "s "; 
     }
-}
 
-var days = Math.floor(distance / day); 
-var hours = Math.floor((distance % day) / hour); 
-var minutes = Math.floor ((distance % hour) / minute); 
-var seconds = Math.floor((distance % minute) / second)
-
-if(distance < 86400000){
-    document.gelElementById('countdown').innerHTML = days + ':'; 
-    document.gelElementById('countdown').innerHTML = hours + ':'; 
-    document.gelElementById('countdown').innerHTML = minutes + ':'; 
-    document.gelElementById('countdown').innerHTML = seconds + ':'; 
-}
-
-timer = setInterval(showRemaining, 1000); 
+},1000); 
