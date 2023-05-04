@@ -58,7 +58,7 @@ function westhamMatch() {
   function chelseaMatch() {
     let chelsea ={
         month: 4,
-        date: 3,
+        date: 2,
         timeBST: "20:00"
     }    
     let now = new Date();
@@ -148,7 +148,7 @@ function checkMatchDate() {
 function matchCountdown (){
 
   if(chelseaMatch()){
-  var countDownDate = new Date("May 3, 2023 20:00:00").getTime(); 
+  var countDownDate = new Date("May 2, 2023 20:00:00").getTime(); 
 
   var interval = setInterval(function(){
       var now = new Date().getTime(); 
@@ -160,7 +160,7 @@ function matchCountdown (){
   
       if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-        document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " +seconds + "s ";  
+        document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;  
       } else if (distance < 0 ){
         document.getElementById("countdown__container").style.display = "none"; 
       }
@@ -182,7 +182,7 @@ function matchCountdown (){
         
         if (distance >= 0 ){
           document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-          document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " +seconds + "s ";  
+          document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;  
         } else if (distance < 0 ){
           document.getElementById("countdown__container").style.display = "none"; 
         }
@@ -203,7 +203,7 @@ function matchCountdown (){
     
         if (distance >= 0 ){
           document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-          document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " +seconds + "s ";  
+          document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;   
         } else if (distance < 0 ){
           document.getElementById("countdown__container").style.display = "none"; 
         }
@@ -224,7 +224,7 @@ function matchCountdown (){
         
         if (distance >= 0 ){
           document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-          document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " +seconds + "s ";  
+          document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;  
         } else if (distance < 0 ){
           document.getElementById("countdown__container").style.display = "none"; 
         }
@@ -246,7 +246,7 @@ function matchCountdown (){
         
          if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-        document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " +seconds + "s ";  
+        document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;   
       } else if (distance < 0 ){
         document.getElementById("countdown__container").style.display = "none"; 
       }
