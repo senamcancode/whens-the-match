@@ -7,12 +7,6 @@ const notplayingDiv = document.getElementById("notplaying").style.textAlign = "c
 const countdownDiv = document.getElementById("countdown__container").style.textAlign= "center"; 
 
 
-function displayFixture(teamName, hours, minutes){
-  document.getElementById("fixture__text").innerHTML = `Arsenal are playing ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`; 
-  document.getElementById("notplaying").style.display ="none";
-  document.getElementById("countdown").style.display = "block"; 
-}
-
 function liverpoolMatch() {
   let liverpoolFixtureDate = {
     month: 3,
@@ -58,7 +52,7 @@ function westhamMatch() {
   function chelseaMatch() {
     let chelsea ={
         month: 4,
-        date: 2,
+        date: 4,
         timeBST: "20:00"
     }    
     let now = new Date();
@@ -105,50 +99,64 @@ function westhamMatch() {
     return (now.getMonth() == wolves.month && now.getDate() == wolves.date);
   }
 
+//function to convert the minutes starting with 0 to '00' string - in such a situation would this function be necessary ie would we just input it as a string  
+  function padToTwo(minutes){
+    if(minutes <= 9) {minutes = (`0${minutes}`).slice(-2);}
+    return minutes; 
+  }
+
+
 function checkMatchDate() {
     if (liverpoolMatch()) {
-        displayFixture("Liverpool (A)", 16, 00); 
+        displayFixture("Liverpool (A)", 16, padToTwo(00)); 
     } 
         
     if(westhamMatch()){
-        displayFixture("West Ham (A)", 14, 00); 
+        displayFixture("West Ham (A)", 14, padToTwo(00)); 
     }  
 
     if(southamptonMatch()){
-        displayFixture("Southampton (H)", 20, 00)
+        displayFixture("Southampton (H)", 20, padToTwo(00)); 
     }
 
     if(mancityMatch()){
-        displayFixture("Man City (A)", 20, 00)
+        displayFixture("Man City (A)", 20, padToTwo(00)); 
     }
 
     if(chelseaMatch()){
-        displayFixture("Chelsea (H)", 20, 00)
+        displayFixture("Chelsea (H)", 20, padToTwo(00)); 
     }
 
     if(newcastleMatch()){
-        displayFixture("Newcastle (A)", 16, 30)
+        displayFixture("Newcastle (A)", 16, padToTwo(00));
     }
   
     if(brightonMatch()){
-      displayFixture("Brighton (H)", 16, 30)
+      displayFixture("Brighton (H)", 16, padToTwo(00)); 
 
     }
 
     if(forrestMatch()){
-      displayFixture("Nott' Forrest (A)", 16, 00)
+      displayFixture("Nott' Forrest (A)", 16, padToTwo(00)); 
     }
 
     if(wolvesMatch()){
-        displayFixture("Nott' Forrest (H)", 16, 30)
+        displayFixture("Nott' Forrest (H)", 16, padToTwo(00));
     }
+}
+
+
+function displayFixture(teamName, hours, minutes){
+  document.getElementById("fixture__text").innerHTML = `Arsenal are playing ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`; 
+  document.getElementById("notplaying").style.display ="none";
+  document.getElementById("countdown").style.display = "block"; 
 }
 
 
 function matchCountdown (){
 
   if(chelseaMatch()){
-  var countDownDate = new Date("May 2, 2023 20:00:00").getTime(); 
+  var countDownDate = new Date("May 4, 2023 21:00:00").getTime(); 
 
   var interval = setInterval(function(){
       var now = new Date().getTime(); 
@@ -160,7 +168,7 @@ function matchCountdown (){
   
       if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-        document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;  
+        document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
       } else if (distance < 0 ){
         document.getElementById("countdown__container").style.display = "none"; 
       }
@@ -182,7 +190,7 @@ function matchCountdown (){
         
         if (distance >= 0 ){
           document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-          document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;  
+          document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;    
         } else if (distance < 0 ){
           document.getElementById("countdown__container").style.display = "none"; 
         }
@@ -203,7 +211,7 @@ function matchCountdown (){
     
         if (distance >= 0 ){
           document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-          document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;   
+          document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;     
         } else if (distance < 0 ){
           document.getElementById("countdown__container").style.display = "none"; 
         }
@@ -224,7 +232,7 @@ function matchCountdown (){
         
         if (distance >= 0 ){
           document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-          document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;  
+          document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;   
         } else if (distance < 0 ){
           document.getElementById("countdown__container").style.display = "none"; 
         }
