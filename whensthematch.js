@@ -52,7 +52,7 @@ function westhamMatch() {
   function chelseaMatch() {
     let chelsea ={
         month: 4,
-        date: 4,
+        date: 2,
         timeBST: "20:00"
     }    
     let now = new Date();
@@ -101,14 +101,18 @@ function westhamMatch() {
 
 //function to convert the minutes starting with 0 to '00' string - in such a situation would this function be necessary ie would we just input it as a string  
   function padToTwo(minutes){
-    if(minutes <= 9) {minutes = (`0${minutes}`).slice(-2);}
+    if(minutes <= 9) {minutes = (`0${minutes}`);}
     return minutes; 
   }
 
+  // function padToTwo(minutes){
+  //   if(minutes <= 9) {minutes = (`0${minutes}`).slice(-2);}
+  //   return minutes; 
+  // }
 
 function checkMatchDate() {
     if (liverpoolMatch()) {
-        displayFixture("Liverpool (A)", 16, padToTwo(00)); 
+        displayFixture("Liverpool (A)", 16, padToTwo(30)); 
     } 
         
     if(westhamMatch()){
@@ -128,21 +132,22 @@ function checkMatchDate() {
     }
 
     if(newcastleMatch()){
-        displayFixture("Newcastle (A)", 16, padToTwo(00));
+        displayFixture("Newcastle (A)", 16, padToTwo(30));
     }
   
     if(brightonMatch()){
-      displayFixture("Brighton (H)", 16, padToTwo(00)); 
+      displayFixture("Brighton (H)", 16, padToTwo(30)); 
 
     }
 
     if(forrestMatch()){
-      displayFixture("Nott' Forrest (A)", 16, padToTwo(00)); 
+      displayFixture("Nott' Forrest (A)", 17, padToTwo(30)); 
     }
 
     if(wolvesMatch()){
-        displayFixture("Nott' Forrest (H)", 16, padToTwo(00));
+        displayFixture("Wolves (H)", 16, padToTwo(30));
     }
+    else {document.getElementById("countdown__container").style.display = "none"; }
 }
 
 
