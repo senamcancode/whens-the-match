@@ -52,7 +52,7 @@ function westhamMatch() {
   function chelseaMatch() {
     let chelsea ={
         month: 4,
-        date: 2,
+        date: 4,
         timeBST: "20:00"
     }    
     let now = new Date();
@@ -147,21 +147,21 @@ function checkMatchDate() {
     if(wolvesMatch()){
         displayFixture("Wolves (H)", 16, padToTwo(30));
     }
-    else {document.getElementById("countdown__container").style.display = "none"; }
 }
 
 
 function displayFixture(teamName, hours, minutes){
   document.getElementById("fixture__text").innerHTML = `Arsenal are playing ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`; 
   document.getElementById("notplaying").style.display ="none";
-  document.getElementById("countdown").style.display = "block"; 
+  document.getElementById("countdown__container").style.display = "block"; 
 }
 
+//function matchTimeElapsed - if the countdown is less than -2hours the fixture text should read arsenal played x team at ... today
 
 function matchCountdown (){
 
   if(chelseaMatch()){
-  var countDownDate = new Date("May 4, 2023 21:00:00").getTime(); 
+  var countDownDate = new Date("May 4, 2023 21:24:00").getTime(); 
 
   var interval = setInterval(function(){
       var now = new Date().getTime(); 
@@ -174,12 +174,19 @@ function matchCountdown (){
       if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
-      } else if (distance < 0 ){
+      } else if (distance < 0 && distance >= -6300000){
+        document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
+        document.getElementById("countdown").innerHTML = "#COYG";  
+        document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+      } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
       }
   
+  
   },1000);
 }; 
+
+
 
   if(newcastleMatch()){
     var countDownDate = new Date("May 7, 2023 16:30:00").getTime(); 
@@ -193,12 +200,16 @@ function matchCountdown (){
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
         
-        if (distance >= 0 ){
-          document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-          document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;    
-        } else if (distance < 0 ){
-          document.getElementById("countdown__container").style.display = "none"; 
-        }
+      if (distance >= 0 ){
+        document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
+        document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
+      } else if (distance < 0 && distance > -6300000){
+        document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
+        document.getElementById("countdown").innerHTML = "#COYG";  
+        document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+      } else if (distance < -6300000){
+        document.getElementById("countdown__container").style.display = "none"; 
+      }
     
     },1000);
   };
@@ -214,12 +225,17 @@ function matchCountdown (){
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-        if (distance >= 0 ){
-          document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-          document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;     
-        } else if (distance < 0 ){
-          document.getElementById("countdown__container").style.display = "none"; 
-        }
+        
+      if (distance >= 0 ){
+        document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
+        document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
+      } else if (distance < 0 && distance > -6300000){
+        document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
+        document.getElementById("countdown").innerHTML = "#COYG";  
+        document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+      } else if (distance < -6300000){
+        document.getElementById("countdown__container").style.display = "none"; 
+      }
     },1000);
   };
 
@@ -235,12 +251,16 @@ function matchCountdown (){
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
         
-        if (distance >= 0 ){
-          document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-          document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;   
-        } else if (distance < 0 ){
-          document.getElementById("countdown__container").style.display = "none"; 
-        }
+      if (distance >= 0 ){
+        document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
+        document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
+      } else if (distance < 0 && distance > -6300000){
+        document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
+        document.getElementById("countdown").innerHTML = "#COYG";  
+        document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+      } else if (distance < -6300000){
+        document.getElementById("countdown__container").style.display = "none"; 
+      }
     
     },1000);
   };
@@ -257,10 +277,14 @@ function matchCountdown (){
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
         
-         if (distance >= 0 ){
+      if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
-        document.getElementById("countdown").innerHTML = `${hours} h ${minutes} m ${seconds} s`;   
-      } else if (distance < 0 ){
+        document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
+      } else if (distance < 0 && distance > -6300000){
+        document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
+        document.getElementById("countdown").innerHTML = "#COYG";  
+        document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+      } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
       }
     
