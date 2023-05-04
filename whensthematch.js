@@ -157,6 +157,7 @@ function displayFixture(teamName, hours, minutes){
 }
 
 //function matchTimeElapsed - if the countdown is less than -2hours the fixture text should read arsenal played x team at ... today
+//function currentlyPlaying - if the countdown is between 0 and 2 hours the fixture text should read, arsenal are playing x. Kick off: y time
 
 function matchCountdown (){
 
