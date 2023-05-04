@@ -2,9 +2,9 @@
 # More features coming soon
 
 additional features to come: 
-1. match result when game is finished 
-2. lineups for game day
-3. live score 
+1. live score 
+2. match result when game is finished 
+3. lineups for game day
 4. pre-game probability stats 
 5. post-game stats 
 
