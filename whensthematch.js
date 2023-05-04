@@ -7,6 +7,11 @@ const notplayingDiv = document.getElementById("notplaying").style.textAlign = "c
 const countdownDiv = document.getElementById("countdown__container").style.textAlign= "center"; 
 
 
+function displayFixture(teamName, hours, minutes){
+  document.getElementById("fixture__text").innerHTML = `Arsenal are playing ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`; 
+  document.getElementById("notplaying").style.display ="none";
+  document.getElementById("countdown").style.display = "block"; 
+}
 
 function liverpoolMatch() {
   let liverpoolFixtureDate = {
@@ -103,7 +108,7 @@ function westhamMatch() {
 function checkMatchDate() {
     if (liverpoolMatch()) {
         displayFixture("Liverpool (A)", 16, 00); 
-    }
+    } 
         
     if(westhamMatch()){
         displayFixture("West Ham (A)", 14, 00); 
@@ -139,11 +144,6 @@ function checkMatchDate() {
     }
 }
 
-function displayFixture(teamName, hours, minutes){
-  document.getElementById("fixture__text").innerHTML = `Arsenal are playing ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`; 
-  document.getElementById("notplaying").style.display ="none";
-  document.getElementById("countdown").style.display = "block"; 
-}
 
 function matchCountdown (){
 
