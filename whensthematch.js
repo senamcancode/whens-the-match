@@ -52,7 +52,7 @@ function westhamMatch() {
   function chelseaMatch() {
     let chelsea ={
         month: 4,
-        date: 4,
+        date: 2,
         timeBST: "20:00"
     }    
     let now = new Date();
@@ -101,14 +101,10 @@ function westhamMatch() {
 
 //function to convert the minutes starting with 0 to '00' string - in such a situation would this function be necessary ie would we just input it as a string  
   function padToTwo(minutes){
-    if(minutes <= 9) {minutes = (`0${minutes}`);}
+    if(minutes <= 9) {minutes = (`0${minutes}`).slice(-2);}
     return minutes; 
   }
 
-  // function padToTwo(minutes){
-  //   if(minutes <= 9) {minutes = (`0${minutes}`).slice(-2);}
-  //   return minutes; 
-  // }
 
 function checkMatchDate() {
     if (liverpoolMatch()) {
@@ -175,10 +171,12 @@ function matchCountdown (){
       if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
+      
       } else if (distance < 0 && distance >= -6300000){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = "#COYG";  
         document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+      
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
       }
@@ -204,10 +202,12 @@ function matchCountdown (){
       if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
+     
       } else if (distance < 0 && distance > -6300000){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = "#COYG";  
         document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+     
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
       }
@@ -230,10 +230,12 @@ function matchCountdown (){
       if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
+      
       } else if (distance < 0 && distance > -6300000){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = "#COYG";  
         document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+      
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
       }
@@ -255,10 +257,12 @@ function matchCountdown (){
       if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
+      
       } else if (distance < 0 && distance > -6300000){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = "#COYG";  
         document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+      
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
       }
@@ -281,10 +285,12 @@ function matchCountdown (){
       if (distance >= 0 ){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = `${hours}h ${minutes}m ${seconds}s`;  
+      
       } else if (distance < 0 && distance > -6300000){
         document.getElementById("countdown").style.color = "rgb(204, 53, 53)"
         document.getElementById("countdown").innerHTML = "#COYG";  
         document.getElementById("countdown__container").style.border = "thin solid rgb(204, 53, 53)";  
+      
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
       }
