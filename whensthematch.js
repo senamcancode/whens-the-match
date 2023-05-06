@@ -1,9 +1,7 @@
-// inspiration for this was taking from this gitpost https://gist.github.com/DavidWells/10708a5be3e5b5e29f13
-
+// inspiration for this was taken from this gitpost https://gist.github.com/DavidWells/10708a5be3e5b5e29f13
 
 
 const fixtureDiv = document.getElementById("fixture__text").style.textAlign = "center"; 
-const notplayingDiv = document.getElementById("notplaying").style.textAlign = "center"; 
 const countdownDiv = document.getElementById("countdown__container").style.textAlign= "center"; 
 
 
@@ -100,6 +98,17 @@ function westhamMatch() {
   }
 
 //function to convert the minutes starting with 0 to '00' string - in such a situation would this function be necessary ie would we just input it as a string  
+
+  function displayFixture(teamName, hours, minutes){
+    document.getElementById("fixture__text").innerHTML = `Arsenal are playing ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`; 
+    document.getElementById("countdown__container").style.display = "block"; 
+  }
+  
+  function notPlaying(){
+    document.getElementById("fixture__text").innerHTML = ` Arsenal are not playing any teams today <br> Click <span><a href="https://www.arsenal.com/fixtures?field_arsenal_team_target_id=1&field_competition_target_id=3958&field_home_away_or_neutral_value=All&field_tv_channel_target_id=All&revision_information=">
+    here</a></span> for a full fixture list`
+  }
+
   function padToTwo(minutes){
     if(minutes <= 9) {minutes = (`0${minutes}`).slice(-2);}
     return minutes; 
@@ -111,49 +120,55 @@ function checkMatchDate() {
         displayFixture("Liverpool (A)", 16, padToTwo(30)); 
     } 
         
-    if(westhamMatch()){
+    else if(westhamMatch()){
         displayFixture("West Ham (A)", 14, padToTwo(00)); 
     }  
 
-    if(southamptonMatch()){
+    else if(southamptonMatch()){
         displayFixture("Southampton (H)", 20, padToTwo(00)); 
     }
 
-    if(mancityMatch()){
+    else if(mancityMatch()){
         displayFixture("Man City (A)", 20, padToTwo(00)); 
     }
 
-    if(chelseaMatch()){
+    else if(chelseaMatch()){
         displayFixture("Chelsea (H)", 20, padToTwo(00)); 
     }
 
-    if(newcastleMatch()){
+    else if(newcastleMatch()){
         displayFixture("Newcastle (A)", 16, padToTwo(30));
     }
   
-    if(brightonMatch()){
+    else if(brightonMatch()){
       displayFixture("Brighton (H)", 16, padToTwo(30)); 
 
     }
 
-    if(forrestMatch()){
+    else if(forrestMatch()){
       displayFixture("Nott' Forrest (A)", 17, padToTwo(30)); 
     }
 
-    if(wolvesMatch()){
+    else if(wolvesMatch()){
         displayFixture("Wolves (H)", 16, padToTwo(30));
+    } 
+
+    else {
+      notPlaying(); 
     }
-}
+} 
 
 
-function displayFixture(teamName, hours, minutes){
-  document.getElementById("fixture__text").innerHTML = `Arsenal are playing ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`; 
-  document.getElementById("notplaying").style.display ="none";
-  document.getElementById("countdown__container").style.display = "block"; 
-}
+
 
 //function matchTimeElapsed - if the countdown is less than -2hours the fixture text should read arsenal played x team at ... today
 //function currentlyPlaying - if the countdown is between 0 and 2 hours the fixture text should read, arsenal are playing x. Kick off: y time
+
+//currently matchCountdown is only for the last 5 Arsenal matches 
+
+function displayGamePlayed(){
+  document.getElementById("fixture__text").innerHTML = `Arsenal played ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`; 
+}
 
 function matchCountdown (){
 
@@ -179,7 +194,8 @@ function matchCountdown (){
       
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
-      }
+        displayGamePlayed() 
+        }
   
   
   },1000);
@@ -210,6 +226,7 @@ function matchCountdown (){
      
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
+        displayGamePlayed() 
       }
     
     },1000);
@@ -238,6 +255,7 @@ function matchCountdown (){
       
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
+        displayGamePlayed() 
       }
     },1000);
   };
@@ -265,6 +283,7 @@ function matchCountdown (){
       
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
+        displayGamePlayed() 
       }
     
     },1000);
@@ -293,6 +312,7 @@ function matchCountdown (){
       
       } else if (distance < -6300000){
         document.getElementById("countdown__container").style.display = "none"; 
+        displayGamePlayed() 
       }
     
     },1000);

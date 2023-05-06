@@ -88,7 +88,7 @@ h1, h2{
     width:18rem; 
     height:12rem; 
     padding:0rem; 
-    margin-bottom:0rem; 
+    margin-bottom:-2.5rem; 
 }
 
 nav{
@@ -178,8 +178,7 @@ a, a:hover, a:active, a:visited {
 
 #fixture__text{
     display:block; 
-    margin-top:3rem;
-  
+    margin-top:3rem; 
 }
 
 
@@ -188,11 +187,9 @@ a, a:hover, a:active, a:visited {
     width: 20vh; 
 }
 
-
-iframe{
-    margin-bottom:1rem; 
+span{
+    color:rgb(204, 53, 53); 
 }
-
 
 
 #highlight__cover__image{
