@@ -54,7 +54,6 @@ these are the colors of the theme
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
 
 body{
-    background: white;
     font-family:'Golos Text', sans-serif;
     display:flex; 
     flex-direction:column; 
@@ -152,6 +151,10 @@ a, a:hover, a:active, a:visited {
     height:40vh; 
 }
 
+#countdown{
+    /* display:none;  */
+    width: 20vh; 
+}
 
 #countdown__container {
     display: flex; 
@@ -159,21 +162,36 @@ a, a:hover, a:active, a:visited {
     align-items: center;
     justify-content: center;
     padding:1rem; 
-    margin:0;
+    margin-top: 2rem;
     display:none; 
 }
 
 .wrapper__small{
     display:flex; 
     margin-bottom:2rem; 
+    justify-content: space-between;
+    width:132.5vh; 
 }
+
+/* .wrapper__small{
+    display:grid; 
+    grid-template-columns: 1fr 1fr;
+    margin-bottom:2rem; 
+    width:145vh; 
+    
+} */
 
 .container__small{
     width:60vh; 
     height:40vh;
-    /* border:1px dotted red; */
-    margin-left:2rem;
-    margin-right:2rem
+}
+
+#game__result__container{
+    margin-left:1rem; 
+}
+
+#highlight__container{
+    margin-left:0; 
 }
 
 #fixture__text{
@@ -181,11 +199,6 @@ a, a:hover, a:active, a:visited {
     margin-top:3rem; 
 }
 
-
-#countdown{
-    /* display:none;  */
-    width: 20vh; 
-}
 
 span{
     color:rgb(204, 53, 53); 
@@ -203,7 +216,6 @@ span{
     opacity:1; 
     transition: opacity .25s ease-in-out;
 }
-
 
 
 /* background-image: url(https://i.guim.co.uk/img/media/b62e032371c61a32c045ea0aabfce94a9d886a7a/0_155_4930_2958/master/4930.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=46493f64f1df6937d550994a60984cbd);

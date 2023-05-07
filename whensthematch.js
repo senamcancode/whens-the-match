@@ -105,8 +105,9 @@ function westhamMatch() {
   }
   
   function notPlaying(){
-    document.getElementById("fixture__text").innerHTML = ` Arsenal are not playing any teams today <br> Click <span><a href="https://www.arsenal.com/fixtures?field_arsenal_team_target_id=1&field_competition_target_id=3958&field_home_away_or_neutral_value=All&field_tv_channel_target_id=All&revision_information=">
-    here</a></span> for a full fixture list`
+    document.getElementById("fixture__text").innerHTML = ` Arsenal are not playing any teams today <br> Click <span><a href="https://www.arsenal.com/fixtures?field_arsenal_team_target_id=1&field_competition_target_id=3958&field_home_away_or_neutral_value=All&field_tv_channel_target_id=All&revision_information= 
+    " target=”_blank”>
+    here </a></span> for a full fixture list`
   }
 
   function padToTwo(minutes){
