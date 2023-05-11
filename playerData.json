@@ -1,25 +1,119 @@
 {
-    "p0": "Aaron Ramsdale", 
-    "p1": "Ben White", 
-    "p2": "Gabriel", 
-    "p3": "Takehiro Tomiyasu", 
-    "p4": "William Saliba",
-    "p5": "Thomas Partey", 
-    "p6": "Bukayo Saka", 
-    "p7": "Martin Ødegaard",
-    "p8": "Granit Xhaka", 
-    "p9": "Jorginho", 
-    "p10": "Oleksandr Zinchenko", 
-    "p11": "Gabriel Martinelli", 
-    "p12": "Gabriel Jesus", 
-    "p13": "Leandro Trossard", 
-    "p14": "Kieran Tierney", 
-    "p15": "Jakub Kiwior", 
-    "p16": "Reiss Nelson",
-    "p17": "Fabio Vieira",
-    "p18": "Eddie Nketiah",   
-    "p19": "Emile Smith Rowe", 
-    "p20": "Rob Holding"
- }
-
- 
+    "players": [
+        {
+            "name": "Aaron Ramsdale",
+            "position": "Goalkeeper",
+            "squad number": "1"
+        },
+        {
+            "name": "Ben White",
+            "position": "Defender",
+            "squad number": "4"
+        },
+        {
+            "name": "Gabriel Magalhães",
+            "position": "Defender",
+            "squad number": "6"
+        },
+        {
+            "name": "Takehiro Tomiyasu",
+            "position": "Defender",
+            "squad number": "18"
+        },
+        {
+            "name": "William Saliba",
+            "position": "Defender",
+            "squad number": "12"
+        },
+        {
+            "name": "Thomas Partey",
+            "position": "Midfielder",
+            "squad number": "5"
+        },
+        {
+            "name": "Bukayo Saka",
+            "position": "Midfielder",
+            "squad number": "7"
+        },
+        {
+            "name": "Martin Ødegaard",
+            "position": "Midfielder",
+            "nsquad number": "8"
+        },
+        {
+            "name": "Granit Xhaka",
+            "position": "Midfielder",
+            "squad number": "34"
+        },
+        {
+            "name": "Jorginho",
+            "position": "Midfielder",
+            "squad number": "20"
+        },
+        {
+            "name": "Oleksandr Zinchenko",
+            "position": "Defender",
+            "squad number": "35"
+        },
+        {
+            "name": "Gabriel Martinelli",
+            "position": "Forward",
+            "squad number": "11"
+        },
+        {
+            "name": "Gabriel Jesus",
+            "position": "Forward",
+            "squad number": "9"
+        },
+        {
+            "name": "Leandro Trossard",
+            "position": "Forward",
+            "squad number": "19"
+        },
+        {
+            "name": "Kieran Tierney",
+            "position": "Defender",
+            "squad number": "3"
+        },
+        {
+            "name": "Jakub Kiwior",
+            "position": "Defender",
+            "squad number": "15"
+        },
+        {
+            "name": "Reiss Nelson",
+            "position": "Forward",
+            "squad number": "24"
+        },
+        {
+            "name": "Fabio Vieira",
+            "position": "Midfielder",
+            "squad number": "21"
+        },
+        {
+            "name": "Eddie Nketiah",
+            "position": "Forward",
+            "squad number": "24"
+        },
+        {
+            "name": "Emile Smith Rowe",
+            "position": "Midfielder",
+            "squad number": "10"
+        },
+        {
+            "name": "Rob Holding",
+            "position": "Defender",
+            "squad number": "16"
+        },
+        {
+            "name": "Matt Turner",
+            "position": "Goalkeeper",
+            "squad number": "30"
+        },
+        {
+            "name": "Karl Hein",
+            "position": "Goalkeeper",
+            "squad number": "31"
+        }
+    ]
+}

@@ -1,46 +1,132 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /*
@@ -53,167 +139,170 @@ these are the colors of the theme
 
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
 
-body{
-    font-family:'Golos Text', sans-serif;
-    display:flex; 
-    flex-direction:column; 
+body {
+    font-family: 'Golos Text', sans-serif;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     max-height: 100vh;
     font-size: 2rem;
 
 }
 
-main{
-    margin-left:10rem; 
-    margin-right:10rem; 
+main {
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
-h1{
-    font-size: 2.5rem; 
-    color:  #000000ff; 
+h1 {
+    font-size: 2.5rem;
+    color: #000000ff;
 }
 
-h2{
-    margin:1rem; 
-    color:black; 
+h2 {
+    margin: 1rem;
+    color: black;
 }
 
-h1, h2{
-    font-weight:bold; 
+h1,
+h2 {
+    font-weight: bold;
 }
 
 #arsenal__logo {
-    width:18rem; 
-    height:12rem; 
-    padding:0rem; 
-    margin-bottom:-2.5rem; 
+    width: 18rem;
+    height: 12rem;
+    padding: 0rem;
+    margin-bottom: -2.5rem;
 }
 
-nav{
-    width:100%; 
-    
+nav {
+    width: 100%;
+    min-height: 8vh;
+    margin-bottom: 6vh;
 }
 
-.navlist{
-    background:white; 
+
+.navlist {
+    background: white;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     /* border: (201, 68, 68, 0.34); */
-    padding: 2rem; 
-    display:flex; 
+    padding: 2rem;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    height:3vh; 
-    /* min-height: 4vh; */
-    margin-top:2rem; 
+    height: 3vh;
+    min-height: 4vh;
+    margin-top: 2rem;
 }
 
-.button{ 
-    margin: 1rem 1rem 0 1rem; 
+.button {
+    margin: 1rem 1rem 0 1rem;
     padding: 0.5rem 2rem;
     border-radius: 20px;
-    border:0.1rem solid black; 
-    cursor:pointer; 
-    font-size: 1rem; 
-    font-family:'Golos Text', sans-serif;
+    border: 0.1rem solid black;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Golos Text', sans-serif;
     text-decoration: none;
-    color: black; 
-    
+    color: black;
+
 }
 
 
-
-a, a:hover, a:active, a:visited {
+a,
+a:hover,
+a:active,
+a:visited {
     text-decoration: none;
-    color: black; 
+    color: black;
 }
 
-#home, #about:hover {
+#home,
+#about:hover {
     border: 0.1rem solid rgb(204, 53, 53);
 }
 
 
-.container, #countdown__container, .container__small {
-    display: flex; 
+.container,
+#countdown__container,
+.container__small {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius:1rem;
+    border-radius: 1rem;
     box-shadow: 0 4px 30px rgba(56, 5, 5, 0.1);
 }
 
-.container{
-    margin:1rem; 
-    padding:3rem; 
+.container {
+    margin: 1rem;
+    padding: 3rem;
     box-shadow: 0 4px 30px rgba(56, 5, 5, 0.1);
-    border: 3px solid rgba(201, 68, 68,);
-    width:120vh; 
-    height:40vh; 
+    border: 3px solid rgba(201, 68, 68, );
+    width: 120vh;
+    height: 40vh;
 }
 
-#countdown{
+#countdown {
     /* display:none;  */
-    width: 20vh; 
+    width: 20vh;
 }
 
 #countdown__container {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding:1rem; 
+    padding: 1rem;
     margin-top: 2rem;
-    display:none; 
+    display: none;
 }
 
-.wrapper__small{
-    display:flex; 
-    margin-bottom:2rem; 
+.wrapper__small {
+    display: flex;
+    margin-bottom: 2rem;
     justify-content: space-between;
-    width:132.5vh; 
-}
+    width: 132.5vh;
+    min-height: 40vh;
 
-/* .wrapper__small{
-    display:grid; 
-    grid-template-columns: 1fr 1fr;
-    margin-bottom:2rem; 
-    width:145vh; 
-    
-} */
-
-.container__small{
-    width:60vh; 
-    height:40vh;
-}
-
-#game__result__container{
-    margin-left:1rem; 
-}
-
-#highlight__container{
-    margin-left:0; 
-}
-
-#fixture__text{
-    display:block; 
-    margin-top:3rem; 
 }
 
 
-span{
-    color:rgb(204, 53, 53); 
+.container__small {
+    width: 60vh;
+    height: 40vh;
+}
+
+#game__result__container {
+    margin-left: 1rem;
+}
+
+#highlight__container {
+    margin-left: 0;
+}
+
+#fixture__text {
+    display: block;
+    margin-top: 3rem;
 }
 
 
-#highlight__cover__image{
-    width:500px; 
-    height:250px; 
-    opacity:0.7; 
+span {
+    color: rgb(204, 53, 53);
+}
+
+
+#highlight__cover__image {
+    width: 500px;
+    height: 250px;
+    opacity: 0.7;
     border-radius: 1rem;
 }
 
-#highlight__cover__image:hover{
-    opacity:1; 
+#highlight__cover__image:hover {
+    opacity: 1;
     transition: opacity .25s ease-in-out;
 }
 
