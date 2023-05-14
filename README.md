@@ -3,10 +3,9 @@
 
 additional features to come: 
 1. live score 
-2. match result when game is finished 
-3. lineups for game day
-4. pre-game probability stats 
-5. post-game stats 
+2. lineups for game day
+3. pre-game probability stats 
+4. post-game stats 
 
 
 # whensthematch website 

@@ -22,9 +22,6 @@
 }
 
 
-#opponent h3 {
-    margin-top: -0.8rem;
-}
 
 #score {
     padding: 2rem;
@@ -42,6 +39,14 @@
 
     align-items: center;
     justify-content: center;
+}
+
+#ARS h3 {
+    margin-top: -3rem;
+}
+
+#ARS img {
+    margin-top: 1rem;
 }
 
 #score__text {
