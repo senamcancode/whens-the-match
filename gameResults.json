@@ -1,0 +1,15 @@
+{
+    "results": [
+        {
+            "opponent": "Newcastle",
+            "arsenal_goals": 2,
+            "opponent_goals": 0
+        },
+        {
+            "opponent": "Brighton",
+            "arsenal_goals": 0,
+            "opponent_goals": 3,
+            "opponent_logo": "https://logodownload.org/wp-content/uploads/2019/10/brighton-hove-albion-logo.png"
+        }
+    ]
+}
