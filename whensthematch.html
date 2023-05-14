@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>When's the Match?</title>
     <link rel="shortcut icon" type="football-icon" href="">
-    <link rel="stylesheet" href="whensthematch.css">
+    <link rel="stylesheet" href="/stylesheets/whensthematch.css">
+    <link rel="stylesheet" href="/stylesheets/livescorecss.css">
+    <link rel="stylesheet" href="/stylesheets/tabstyles.css">
     </style>
     <link rel="icon" href="http://example.com/favicon.png">
 </head>
@@ -24,7 +26,7 @@
     <main>
 
         <div class="container" id="schedule__countainer">
-            <h1>Match Schedule</h1>
+            <h3>Match Schedule</h3>
 
             <div class="image_container">
                 <img id="arsenal__logo"
@@ -40,26 +42,60 @@
         </div>
 
 
-        <div class="wrapper__small">
-            <div class="container__small" id="game__result__container">
+        <div class="tab__container" id="tab__container">
+            <div class="buttonContainer">
+                <button class="tablinks" onclick="showTabInfo(event, 'score')" id="defaultOpen">Score</button>
+                <button class="tablinks" onclick="showTabInfo(event, 'player__lineup')">Line Up</button>
+                <button class="tablinks" onclick="showTabInfo(event, 'stats')">Stats</button>
+                <button class="tablinks" onclick="showTabInfo(event, 'highlights')">Highlights</button>
 
             </div>
-            <div class="container__small" id="highlight__container">
-                <h2>Watch Match Highlights</h2>
-                <a href="https://www.youtube.com/playlist?list=PLvuwbYTkUzHc6Ci5U9hdo26eSIUrmx_Qs"><img
+
+            <!-- <div class="tabcontent"> -->
+            <div id="score" class="tabContent">
+                <div id="ARS">
+                    <img id="arsenal__score__logo"
+                        src="https://www.freepnglogos.com/uploads/arsenal-logo-png/arsenal-logo-symbol-3.png"
+                        alt="The Arsenal team badge">
+                    <h3>Arsenal </h3>
+                </div>
+
+                <div id="score__data">
+                    <p id="score__text"> <span id="arsenal__goals">0</span> : 0 </p>
+                    <p id="elapsed"> 45'</p>
+
+                </div>
+
+                <div id="opponent">
+                    <img id="brighton__score__logo"
+                        src="https://logodownload.org/wp-content/uploads/2019/10/brighton-hove-albion-logo.png"
+                        alt="The Brighton team Badge">
+                    <h3>Brighton</h3>
+                </div>
+            </div>
+
+
+
+            <div id="player__lineup" class="tabContent">
+
+            </div>
+            <div id="stats" class="tabContent">
+
+            </div>
+            <div id="highlights" class="tabContent">
+                <h3>Watch Highlights</h3>
+                <a href="https://www.youtube.com/playlist?list=PLvuwbYTkUzHc6Ci5U9hdo26eSIUrmx_Qs" target="_blank"><img
                         id="highlight__cover__image"
                         src="https://ichef.bbci.co.uk/news/999/cpsprodpb/59ff/live/a4facd50-2853-11ed-b888-0131c97a2266.jpg"></a>
 
             </div>
         </div>
-        <!-- <div class="container" id="player__lineup">
-
-        </div> -->
     </main>
 
 
-    <script src="whensthematch.js"></script>
-    <script src="dataFetch.js"></script>
+    <script src="/javascriptfiles/whensthematch.js"></script>
+    <script src="/javascriptfiles/tabContent.js"></script>
+    <script src="/javascriptfiles/playerDataFetch.js"></script>
 
 
 </body>
