@@ -110,6 +110,9 @@ function notPlaying() {
     here </a></span> for a full fixture list`
 }
 
+function displayGamePlayed(teamName, hours, minutes) {
+  document.getElementById("fixture__text").innerHTML = `Arsenal played ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`;
+}
 
 
 function checkMatchDate() {
@@ -158,10 +161,6 @@ function checkMatchDate() {
 
 
 //currently matchCountdown is only for the last 5 Arsenal matches 
-
-function displayGamePlayed(teamName, hours, minutes) {
-  document.getElementById("fixture__text").innerHTML = `Arsenal played ${teamName} today at ${hours}:${minutes} BST / ${hours + 1}:${minutes} CEST`;
-}
 
 
 function matchCountdown() {
